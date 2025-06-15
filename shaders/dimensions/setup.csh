@@ -8,12 +8,12 @@ const ivec3 workGroups = ivec3(6, 6, 1);
     #include "/lib/entities.glsl"
     #include "/lib/lpv_blocks.glsl"
 
-    const vec3 LightColor_Amethyst = vec3(0.464, 0.227, 0.788);
-    const vec3 LightColor_Candles = vec3(1.0, 0.4, 0.1);
-    const vec3 LightColor_CopperBulb = vec3(1.0);
+    const vec3 LightColor_Amethyst = vec3(0.75, 0.44, 1.00);
+    const vec3 LightColor_Candles = vec3(1.00, 0.57, 0.30);
+    const vec3 LightColor_CopperBulb = vec3(1.00, 0.55, 0.27);
     const vec3 LightColor_LightBlock = vec3(1.0);
-    const vec3 LightColor_RedstoneTorch = vec3(0.939, 0.305, 0.164);
-    const vec3 LightColor_SeaPickle = vec3(0.283, 0.394, 0.212);
+    const vec3 LightColor_RedstoneTorch = vec3(1.00, 0.18, 0.10);
+    const vec3 LightColor_SeaPickle = vec3(0.75, 1.00, 0.50);
 
     const vec3 LightColor_Candles_Black = vec3(0.200);
     const vec3 LightColor_Candles_Blue = vec3(0.000, 0.259, 1.000);
@@ -113,12 +113,12 @@ void main() {
         }
 
         if (blockId == BLOCK_BEACON || blockId == ITEM_BEACON) {
-            lightColor = vec3(1.0);
-            lightRange = 15.0;
+            lightColor = vec3(0.45, 0.73, 1.00);
+            lightRange = 13.0;
         }
 
         if (blockId == BLOCK_BREWING_STAND) {
-            lightColor = vec3(0.636, 0.509, 0.179);
+            lightColor = vec3(1.00, 0.63, 0.15);
             lightRange = 1.0;
             mixWeight = 0.8;
         }
@@ -424,15 +424,15 @@ void main() {
                         break;
                     case BLOCK_CANDLES_LIT_2:
                         lightColor = LightColor_Candles;
-                        lightRange = 6.0;
+                        lightRange = 4.0;
                         break;
                     case BLOCK_CANDLES_LIT_3:
                         lightColor = LightColor_Candles;
-                        lightRange = 9.0;
+                        lightRange = 6.0;
                         break;
                     case BLOCK_CANDLES_LIT_4:
                         lightColor = LightColor_Candles;
-                        lightRange = 12.0;
+                        lightRange = 9.0;
                         break;
                 }
         #endif
@@ -445,9 +445,9 @@ void main() {
         }
 
         if (blockId == BLOCK_CAVE_VINE_BERRIES || blockId == ITEM_GLOW_BERRIES) {
-            lightColor = vec3(1.0, 1.0, 0.5);
+            lightColor = vec3(1.00, 0.57, 0.30);
             
-            lightRange = 14.0;
+            lightRange = 16.0;
             mixWeight = 1.0;
         }
 
@@ -482,23 +482,23 @@ void main() {
         }
 
         if (blockId == BLOCK_CRYING_OBSIDIAN) {
-            lightColor = vec3(0.390, 0.065, 0.646);
-            lightRange = 10.0;
+            lightColor = vec3(0.60, 0.10, 1.00);
+            lightRange = 8.0;
         }
 
         if (blockId == BLOCK_END_GATEWAY) {
-            lightColor = vec3(1.0);
-            lightRange = 15.0;
+            lightColor = vec3(0.75, 1.00, 0.83);
+            lightRange = 12.0;
         }
 
         if (blockId == BLOCK_END_ROD || blockId == ITEM_END_ROD) {
-            lightColor = vec3(0.957, 0.929, 0.875);
-            lightRange = 14.0;
+            lightColor = vec3(1.00, 1.00, 1.00);
+            lightRange = 12.0;
         }
 
         if (blockId == BLOCK_FIRE) {
-            lightColor = vec3(0.864, 0.598, 0.348);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.45, 0.10);
+            lightRange = 12.0;
             mixWeight = 1.0;
         }
 
@@ -509,57 +509,57 @@ void main() {
         }
 
         if (blockId == BLOCK_FROGLIGHT_OCHRE || blockId == ITEM_FROGLIGHT_OCHRE) {
-            lightColor = vec3(0.768, 0.648, 0.108);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.65, 0.30);
+            lightRange = 12.0;
         }
 
         if (blockId == BLOCK_FROGLIGHT_PEARLESCENT || blockId == ITEM_FROGLIGHT_PEARLESCENT) {
-            lightColor = vec3(0.737, 0.435, 0.658);
-            lightRange = 15.0;
+            lightColor = vec3(0.75, 0.44, 1.00);
+            lightRange = 12.0;
         }
 
         if (blockId == BLOCK_FROGLIGHT_VERDANT || blockId == ITEM_FROGLIGHT_VERDANT) {
-            lightColor = vec3(0.463, 0.763, 0.409);
-            lightRange = 15.0;
+            lightColor = vec3(0.86, 1.00, 0.44);
+            lightRange = 12.0;
         }
 
         if (blockId == BLOCK_FURNACE_LIT) {
-            lightColor = vec3(0.8, 0.7, 0.1);
-            lightRange = 13.0;
+            lightColor = vec3(1.00, 0.57, 0.30);
+            lightRange = 10.0;
         }
 
         if (blockId == BLOCK_GLOW_LICHEN || blockId == ITEM_GLOW_LICHEN) {
-            lightColor = vec3(0.1, 0.2, 0.12);
-            lightRange = 7.0;
+            lightColor = vec3(1.0);
+            lightRange = 1.0;
         }
 
         if (blockId == BLOCK_GLOWSTONE || blockId == ITEM_GLOWSTONE) {
-            lightColor = vec3(0.747, 0.594, 0.326);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.55, 0.27);
+            lightRange = 14.0;
         }
 
         if (blockId == ITEM_GLOWSTONE_DUST) {
-            lightColor = vec3(0.747, 0.594, 0.326);
-            lightRange = 8.0;
+            lightColor = vec3(1.00, 0.55, 0.27);
+            lightRange = 6.0;
         }
 
         if (blockId == BLOCK_JACK_O_LANTERN || blockId == ITEM_JACK_O_LANTERN) {
-            lightColor = vec3(0.864, 0.598, 0.348);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.57, 0.30);
+            lightRange = 12.0;
         }
 
         if (blockId == BLOCK_LANTERN || blockId == ITEM_LANTERN) {
-            lightColor = vec3(0.839, 0.541, 0.2);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.55, 0.27);
+            lightRange = 13.0;
             mixWeight = 0.8;
         }
 
         if (blockId == BLOCK_LAVA) {
-            lightColor = vec3(0.659, 0.302, 0.106);
+            lightColor = vec3(1.00, 0.30, 0.10);
             lightRange = 15.0;
         }
         else if (blockId == ITEM_LAVA_BUCKET) {
-            lightColor = vec3(0.659, 0.302, 0.106);
+            lightColor = vec3(1.00, 0.30, 0.10);
             lightRange = 8.0;
         }
 
@@ -617,7 +617,7 @@ void main() {
         }
 
         if (blockId == BLOCK_MAGMA || blockId == ITEM_MAGMA) {
-            lightColor = vec3(0.747, 0.323, 0.110);
+            lightColor = vec3(1.00, 0.45, 0.10);
             lightRange = 3.0;
             mixWeight = 0.0;
         }
@@ -629,8 +629,8 @@ void main() {
         }
 
         if (blockId == BLOCK_REDSTONE_LAMP_LIT) {
-            lightColor = vec3(0.953, 0.796, 0.496);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.55, 0.27);
+            lightRange = 14.0;
             mixWeight = 0.0;
         }
 
@@ -732,47 +732,47 @@ void main() {
         #endif
 
             case BLOCK_RESPAWN_ANCHOR_4:
-                lightColor = vec3(1.0, 0.2, 1.0);
-                lightRange = 15.0;
+                lightColor = vec3(0.60, 0.10, 1.00);
+                lightRange = 8.0;
                 break;
             case BLOCK_SCULK_SENSOR_ACTIVE:
-                lightColor = vec3(0.1, 0.4, 1.0);
+                lightColor = vec3(0.75, 1.00, 0.83);
                 lightRange = 1.0;
                 break;
             case BLOCK_SEA_PICKLE_WET_1:
                 lightColor = LightColor_SeaPickle;
-                lightRange = 6.0;
+                lightRange = 3.0;
                 mixWeight = 1.0;
                 break;
             case BLOCK_SEA_PICKLE_WET_2:
                 lightColor = LightColor_SeaPickle;
-                lightRange = 9.0;
+                lightRange = 4.0;
                 mixWeight = 1.0;
                 break;
             case BLOCK_SEA_PICKLE_WET_3:
                 lightColor = LightColor_SeaPickle;
-                lightRange = 12.0;
+                lightRange = 6.0;
                 mixWeight = 1.0;
                 break;
             case BLOCK_SEA_PICKLE_WET_4:
                 lightColor = LightColor_SeaPickle;
-                lightRange = 15.0;
+                lightRange = 8.0;
                 mixWeight = 1.0;
                 break;
         }
         
         if (blockId == BLOCK_SEA_LANTERN || blockId == ITEM_SEA_LANTERN) {
-            lightColor = vec3(0.553, 0.748, 0.859);
+            lightColor = vec3(1.0);
             lightRange = 15.0;
         }
 
         if (blockId == BLOCK_SHROOMLIGHT || blockId == ITEM_SHROOMLIGHT) {
-            lightColor = vec3(0.848, 0.469, 0.205);
-            lightRange = 15.0;
+            lightColor = vec3(1.00, 0.45, 0.10);
+            lightRange = 10.0;
         }
 
         if (blockId == BLOCK_SOUL_FIRE) {
-            lightColor = vec3(0.1, 0.6, 1.0);
+            lightColor = vec3(0.45, 0.73, 1.00);
             lightRange = 10.0;
             mixWeight = 1.0;
         }
@@ -781,7 +781,7 @@ void main() {
             blockId == BLOCK_SOUL_TORCH || blockId == ITEM_SOUL_TORCH ||
             blockId == BLOCK_SOUL_LANTERN || blockId == ITEM_SOUL_LANTERN
         ) {
-            lightColor = vec3(0.1, 0.6, 1.0);
+            lightColor = vec3(0.45, 0.73, 1.00);
             lightRange = 10.0;
             mixWeight = 0.8;
         }
@@ -789,8 +789,8 @@ void main() {
         if (blockId == BLOCK_TORCH || blockId == ITEM_TORCH ||
             blockId == BLOCK_LANTERN || blockId == ITEM_LANTERN
         ) {
-            lightColor = vec3(TORCH_R, TORCH_G, TORCH_B);
-            lightRange = 14.0;
+            lightColor = vec3(1.00, 0.57, 0.30);
+            lightRange = 12.0;
             mixWeight = 0.8;
         }
 
@@ -858,31 +858,31 @@ void main() {
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_BLACK:
-                tintColor = vec3(0.3);
+                tintColor = vec3(0.1);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_BLUE:
-                tintColor = vec3(0.1, 0.1, 0.98);
+                tintColor = vec3(0.1, 0.1, 1.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_BROWN:
-                tintColor = vec3(0.566, 0.388, 0.148);
+                tintColor = vec3(0.7, 0.7, 0.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_CYAN:
-                tintColor = vec3(0.082, 0.533, 0.763);
+                tintColor = vec3(0.1, 1.0, 1.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_GRAY:
-                tintColor = vec3(0.4, 0.4, 0.4);
+                tintColor = vec3(0.3);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_GREEN:
-                tintColor = vec3(0.125, 0.808, 0.081);
+                tintColor = vec3(0.1, 1.0, 0.1);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_LIGHT_BLUE:
-                tintColor = vec3(0.320, 0.685, 0.955);
+                tintColor = vec3(0.5, 0.5, 1.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_LIGHT_GRAY:
@@ -890,49 +890,49 @@ void main() {
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_LIME:
-                tintColor = vec3(0.633, 0.924, 0.124);
+                tintColor = vec3(0.5, 1.0, 0.5);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_MAGENTA:
-                tintColor = vec3(0.698, 0.298, 0.847);
+                tintColor = vec3(1.0, 0.1, 1.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_ORANGE:
-                tintColor = vec3(0.919, 0.586, 0.185);
+                tintColor = vec3(1.0, 0.5, 0.1);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_PINK:
-                tintColor = vec3(0.949, 0.274, 0.497);
+                tintColor = vec3(1.0, 0.5, 1.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_PURPLE:
-                tintColor = vec3(0.578, 0.170, 0.904);
+                tintColor = vec3(0.7, 0.1, 1.0);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_RED:
-                tintColor = vec3(0.999, 0.188, 0.188);
+                tintColor = vec3(1.0, 0.1, 0.1);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_WHITE:
-                tintColor = vec3(0.96, 0.96, 0.96);
+                tintColor = vec3(0.9);
                 mixWeight = 1.0;
                 break;
             case BLOCK_GLASS_YELLOW:
-                tintColor = vec3(0.965, 0.965, 0.123);
+                tintColor = vec3(1.0, 1.0, 0.1);
                 mixWeight = 1.0;
                 break;
             case BLOCK_HONEY:
-                tintColor = vec3(0.984, 0.733, 0.251);
+                tintColor = vec3(1.0, 0.5, 0.1);
                 mixWeight = 1.0;
                 break;
             case BLOCK_NETHER_PORTAL:
-                lightColor = vec3(0.502, 0.165, 0.831);
-                tintColor = vec3(0.502, 0.165, 0.831);
-                lightRange = 11.0;
+                lightColor = vec3(0.60, 0.10, 1.00);
+                tintColor = vec3(0.60, 0.10, 1.00);
+                lightRange = 12.0;
                 mixWeight = 1.0;
                 break;
             case BLOCK_SLIME:
-                tintColor = vec3(0.408, 0.725, 0.329);
+                tintColor = vec3(0.5, 1.0, 0.5);
                 mixWeight = 1.0;
                 break;
 
